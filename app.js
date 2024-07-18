@@ -3,7 +3,9 @@ const app = express();
 const port = 80;
 
 app.set('view engine', 'ejs');
-app.use(express.static('public'));
+app.use(express.static('public', {
+  maxAge: '30d'
+}));
 
 app.get('/', (req, res) => {
     res.render('index');
