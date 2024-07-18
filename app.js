@@ -9,7 +9,7 @@ app.use(express.static('public', {
 
 // Middleware для проверки доменного имени
 const allowDomainMiddleware = (req, res, next) => {
-  const allowedHost = 'www.nocrynomercy.ru'; // Замените на ваш домен
+  const allowedHost = 'nocrynomercy.ru'; // Замените на ваш домен
 
   // Получаем хост из заголовка запроса
   const host = req.headers.host;
