@@ -19,7 +19,6 @@ const allowDomainMiddleware = (req, res, next) => {
   next();
 };
 
-// Использование middleware для всех маршрутов
 app.use(allowDomainMiddleware);
 
 app.get('/', (req, res) => {
