@@ -7,19 +7,15 @@ app.use(express.static('public', {
   maxAge: '30d'
 }));
 
-// Middleware для проверки доменного имени
 const allowDomainMiddleware = (req, res, next) => {
-  const allowedHost = 'nocrynomercy.ru'; // Замените на ваш домен
+  const allowedHost = 'nocrynomercy.ru';
 
-  // Получаем хост из заголовка запроса
   const host = req.headers.host;
 
-  // Проверяем, соответствует ли хост допустимому домену
   if (host !== allowedHost) {
     return res.status(403).send('');
   }
 
-  // Если хост соответствует, продолжаем выполнение запроса
   next();
 };
 
