@@ -1,0 +1,92 @@
+body {
+    background-color: #fff;
+    color: #000;
+    font-family: 'Lora', serif;
+}
+
+.navbar {
+    background-color: #f8f9fa;
+}
+
+.nav-link {
+    color: #000 !important;
+}
+
+.nav-link:hover {
+    color: #000 !important;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lora', serif;
+}
+
+.btn-primary {
+    background-color: #000;
+    border-color: #000;
+    color: #fff; /* Белый текст */
+}
+
+.btn-primary:hover {
+    background-color: #fff;
+    border-color: #000;
+    color: #000; /* Черный текст */
+}
+
+.img-fluid {
+    width: 100%;
+    max-width: 400px; /* Размер картинки на главной странице */
+    height: auto;
+    box-shadow: 0 0 10px #000;
+    border-radius: 10px;
+}
+
+.header-image {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Центрирование элементов в контейнере */
+}
+.emoji {
+    font-size: 1.5em;
+}
+.header, .section {
+    margin-bottom: 20px;
+}
+.header h1, .section h2 {
+    margin: 0;
+    padding-bottom: 10px;
+}
+.section ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: left; /* Выравнивание текста списка по левому краю */
+    display: inline-block; /* Чтобы список занимал только столько места, сколько нужно */
+}
+.section li {
+    margin-bottom: 10px;
+    position: relative;
+}
+.section li::before {
+    content: "—";
+    position: absolute;
+    left: -15px; /* Сдвиг маркера влево для выравнивания по центру */
+    color: #555;
+}
+.link {
+    color: #1a0dab;
+    text-decoration: none;
+}
+.link:hover {
+    text-decoration: underline;
+}
