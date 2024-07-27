@@ -3,9 +3,7 @@ const app = express();
 const port = 80;
 
 const ensureSecure = (req, res, next) => {
-  // Проверяем, если запрос не безопасен (не HTTPS)
   if (req.headers['x-forwarded-proto'] !== 'https') {
-    // Перенаправляем на тот же URL, но с HTTPS
     return res.redirect(`https://${req.headers.host}${req.url}`);
   }
   next();
@@ -13,12 +11,12 @@ const ensureSecure = (req, res, next) => {
 
 app.enable('trust proxy');
 
-//app.use(ensureSecure);
+app.use(ensureSecure);
 
 app.set('view engine', 'ejs');
-/*app.use(express.static('public', {
-  maxAge: '1d'
-}));*/
+app.use(express.static('public', {
+  maxAge: 1000
+}));
 
 const allowDomainMiddleware = (req, res, next) => {
   const allowedHosts = ['nocrynomercy.ru', 'localhost'];
