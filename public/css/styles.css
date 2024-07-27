@@ -1,46 +1,107 @@
+/* Основные стили для светлой темы */
+:root {
+    --background-color: #fff;
+    --text-color: #000;
+    --navbar-background: #f8f9fa;
+    --navbar-brand-color: #000;
+    --nav-link-color: #000;
+    --btn-primary-background: #000;
+    --btn-primary-border: #000;
+    --btn-primary-text: #fff;
+    --btn-primary-hover-background: #fff;
+    --btn-primary-hover-border: #000;
+    --btn-primary-hover-text: #000;
+    --image-shadow: 0 0 10px #000;
+    --container-background: #fff;
+    --container-shadow: rgba(0, 0, 0, 0.1);
+    --link-color: #1a0dab;
+    --link-hover-color: #1a0dab;
+}
+
+/* Темная тема */
+body.dark-mode {
+    --background-color: #121212;
+    --text-color: #e0e0e0;
+    --navbar-background: #333;
+    --navbar-brand-color: #fff;
+    --nav-link-color: #e0e0e0;
+    --btn-primary-background: #e0e0e0;
+    --btn-primary-border: #e0e0e0;
+    --btn-primary-text: #121212;
+    --btn-primary-hover-background: #121212;
+    --btn-primary-hover-border: #e0e0e0;
+    --btn-primary-hover-text: #e0e0e0;
+    --image-shadow: 0 0 10px #e0e0e0;
+    --container-background: #1e1e1e;
+    --container-shadow: rgba(0, 0, 0, 0.3);
+    --link-color: #8ab4f8;
+    --link-hover-color: #8ab4f8;
+}
+
 body {
-    background-color: #fff;
-    color: #000;
+    background-color: var(--background-color);
+    color: var(--text-color);
     font-family: 'Lora', serif;
 }
 
 .navbar {
-    background-color: #f8f9fa;
+    background-color: var(--navbar-background);
 }
 
 .nav-link {
-    color: #000 !important;
+    color: var(--nav-link-color) !important;
 }
 
 .nav-link:hover {
-    color: #000 !important;
+    color: var(--nav-link-color) !important;
 }
 
+.navbar-brand {
+    color: var(--navbar-brand-color);
+}
+
+.navbar-brand:hover {
+    color: var(--navbar-brand-color);
+}
 .container {
-    margin-top: 50px;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Lora', serif;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: var(--container-background);
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--container-shadow);
+    text-align: center; /* Центрирование элементов в контейнере */
 }
 
 .btn-primary {
-    background-color: #000;
-    border-color: #000;
-    color: #fff; /* Белый текст */
+    background-color: var(--btn-primary-background);
+    border-color: var(--btn-primary-border);
+    color: var(--btn-primary-text); /* Белый текст */
 }
 
 .btn-primary:hover {
-    background-color: #fff;
-    border-color: #000;
-    color: #000; /* Черный текст */
+    background-color: var(--btn-primary-hover-background);
+    border-color: var(--btn-primary-hover-border);
+    color: var(--btn-primary-hover-text); /* Черный текст */
+}
+
+#theme-toggle {
+    background-color: var(--btn-primary-background);
+    border-color: var(--btn-primary-border);
+    color: var(--btn-primary-text);
+}
+
+#theme-toggle:hover {
+    background-color: var(--btn-primary-hover-background);
+    border-color: var(--btn-primary-hover-border);
+    color: var(--btn-primary-hover-text);
 }
 
 .img-fluid {
     width: 100%;
     max-width: 400px; /* Размер картинки на главной странице */
     height: auto;
-    box-shadow: 0 0 10px #000;
+    box-shadow: 0 0 10px var(--image-shadow);
     border-radius: 10px;
 }
 
@@ -48,45 +109,49 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 20px;
     margin-bottom: 20px;
 }
-.container {
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center; /* Центрирование элементов в контейнере */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lora', serif;
 }
+
 .emoji {
     font-size: 1.5em;
 }
+
 .header, .section {
     margin-bottom: 20px;
 }
+
 .header h1, .section h2 {
     margin: 0;
     padding-bottom: 10px;
 }
+
 .section ul {
     list-style-type: none;
     padding: 0;
     text-align: left; /* Выравнивание текста списка по левому краю */
     display: inline-block; /* Чтобы список занимал только столько места, сколько нужно */
 }
+
 .section li {
     margin-bottom: 10px;
     position: relative;
 }
+
 .section li::before {
     content: "—";
     position: absolute;
     left: -15px; /* Сдвиг маркера влево для выравнивания по центру */
     color: #555;
 }
+
 .link {
-    color: #1a0dab;
+    color: var(--link-color);
     text-decoration: none;
 }
+
 .link:hover {
+    color: var(--link-hover-color);
     text-decoration: underline;
 }
