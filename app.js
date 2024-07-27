@@ -13,12 +13,12 @@ const ensureSecure = (req, res, next) => {
 
 app.enable('trust proxy');
 
-app.use(ensureSecure);
+//app.use(ensureSecure);
 
 app.set('view engine', 'ejs');
-app.use(express.static('public', {
-  maxAge: '30d'
-}));
+/*app.use(express.static('public', {
+  maxAge: '1d'
+}));*/
 
 const allowDomainMiddleware = (req, res, next) => {
   const allowedHosts = ['nocrynomercy.ru', 'localhost'];
