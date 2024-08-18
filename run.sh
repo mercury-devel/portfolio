@@ -22,6 +22,7 @@ build_image() {
 create_and_run_container() {
     echo "Creating and starting container..."
     docker run -p 80:80 -d --name portfolio portfolio
+    docker update --restart unless-stopped portfolio
 }
 
 # Function to stop the container
