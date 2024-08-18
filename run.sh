@@ -21,7 +21,7 @@ build_image() {
 # Function to create and start the container
 create_and_run_container() {
     echo "Creating and starting container..."
-    docker run -d --name portfolio --env-file .env portfolio
+    docker run -p 80:80 -d --name portfolio portfolio
 }
 
 # Function to stop the container
