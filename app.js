@@ -19,7 +19,7 @@ app.use(express.static('public', {
 }));
 
 const allowDomainMiddleware = (req, res, next) => {
-  const allowedHosts = ['nocrynomercy.ru', 'localhost'];
+  const allowedHosts = ['nocrynomercy.ru', 'mercuria.dev', 'localhost'];
 
   const host = req.headers.host;
   if (!allowedHosts.includes(host)) {
